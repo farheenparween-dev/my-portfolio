@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farheen | Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to right, #d0e2f2, #f9f9fb);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      background-attachment: fixed;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .card {
+      background: linear-gradient(135deg, #ffffff, #f0f4ff);
+      padding: 50px;
+      border-radius: 30px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+      max-width: 750px;
+      width: 100%;
+      text-align: center;
+      transition: 0.4s ease;
+      position: relative;
+      backdrop-filter: blur(10px);
+      border: 2px solid #d1d5db;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+    }
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 25px;
+      border: 6px solid #6d28d9;
+      transition: 0.4s ease;
+      box-shadow: 0 12px 25px rgba(109, 40, 217, 0.3);
+    }
+    .avatar:hover {
+      transform: scale(1.12);
+      box-shadow: 0 14px 30px rgba(109, 40, 217, 0.5);
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: #1f2937;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #6d28d9, #9333ea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #6b7280;
+      margin-bottom: 25px;
+      min-height: 1.4rem;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 35px;
+      color: #374151;
+    }
+    .btn {
+      display: inline-block;
+      margin: 12px 15px;
+      padding: 14px 32px;
+      background: linear-gradient(to right, #6d28d9, #9333ea);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(109, 40, 217, 0.3);
+    }
+    .btn:hover {
+      background: linear-gradient(to right, #5b21b6, #7e22ce);
+      transform: translateY(-4px);
+    }
+    .socials {
+      margin-top: 40px;
+    }
+    .socials a {
+      margin: 0 16px;
+      text-decoration: none;
+      color: #6d28d9;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .socials a:hover {
+      color: #4c1d95;
+      transform: scale(1.15);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px 20px;
+        border-radius: 20px;
+      }
+      .avatar {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+      .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin: 10px 8px;
+      }
+      .socials a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const text = "Frontend Developer | IT Diploma Holder";
+      let index = 0;
+      const h2 = document.getElementById("typing");
+      function type() {
+        if (index < text.length) {
+          h2.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, 50);
+        }
+      }
+      type();
+
+      setTimeout(() => {
+        alert("👋 Welcome to Farheen's Portfolio!");
+      }, 500);
+    });
+  </script>
+</head>
+<body>
+  <div class="card">
+    <img class="avatar" src="https://i.imgur.com/qU3sk9X.jpeg" alt="Farheen">
+    <h1>Farheen Parween</h1>
+    <h2 id="typing"></h2>
+    <p>
+      Passionate about crafting beautiful, responsive websites using HTML, CSS, and JavaScript. I hold a diploma in Information Technology and enjoy turning ideas into interactive web experiences. Always eager to learn and grow in the world of web development.
+    </p>
+    <a class="btn" href="#">Projects</a>
+    <a class="btn" href="mailto:farheenparween1111@gmail.com">Let's Connect</a>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/farheen-parween-609096312ye" target="_blank">LinkedIn</a>
+      <a href="https://github.com/farheenparween-dev" target="_blank">GitHub</a>
+      <a href="mailto:farheenparween1111@gmail.com">Email</a>
+    </div>
+  </div>
+</body>
+</html>
